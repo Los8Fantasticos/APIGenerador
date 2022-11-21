@@ -39,6 +39,8 @@ namespace Common.Messages
 
         public ByteBuffer GetBuffer()
         {
+            //clean buffer
+            _buffer = new ByteBuffer();
             WriteToBuffer();
             return _buffer;
         }

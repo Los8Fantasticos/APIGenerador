@@ -39,12 +39,11 @@ namespace APIGenerador.Business
                 Console.WriteLine($"Patente detectada: {vehiculo.Patente}");
 
                 vehiculo.Notify();
-                //sleep for 1 second
-                Thread.Sleep(2000);
+                //sleep for 0.1 second
+                Thread.Sleep(100);
             }
 
-            vehiculo.Dispose();
-
+            Console.WriteLine("Todas las patentes fueron procesadas...");
 
         }
         

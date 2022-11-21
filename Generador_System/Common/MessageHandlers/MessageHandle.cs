@@ -7,7 +7,7 @@ namespace Common.MessageHandlers
 {
     public static class MessageHandle
     {
-        public delegate void MessageHandler<T>(T message, ResponseToMachine socketToRespond) where T : IBaseMessage;
+        public delegate void MessageHandler<T>(T message) where T : IBaseMessage;
 
         private static IDictionary<MessageIdentifier, MessageHandler<IBaseMessage>> MessageHandlers;
 
@@ -59,7 +59,7 @@ namespace Common.MessageHandlers
                     }
                     foreach (var handler in handlers)
                     {
-                        handler.Invoke(message, new ResponseToMachine(socketToRespond));
+                        handler.Invoke(message);
                     }
                 }
                 catch (Exception ex)

@@ -10,9 +10,9 @@ using SocketClient;
 
 using SocketServer;
 
-//MessageConfig msgConf = new MessageConfig();
-//msgConf.Initialize();
-//MessageHandle.Initialize(msgConf);
+MessageConfig msgConf = new MessageConfig();
+msgConf.Initialize();
+MessageHandle.Initialize(msgConf);
 
 BusinessLogic businessLogic = new();
 

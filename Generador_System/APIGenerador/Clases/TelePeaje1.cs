@@ -6,7 +6,7 @@ namespace APIGenerador.Clases
 {
     public class TelePeaje1 : IObserver
     {
-        Client telePeaje1 = new Client("localhost", 5000);
+        Client telePeaje1 = new Client("127.0.0.1", 5000);
         ClientRequestNumMessage requestMessage = new ClientRequestNumMessage();
 
         public void Dispose()
